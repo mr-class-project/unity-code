@@ -7,7 +7,11 @@ using UnityEngine.UI;
 
 public class WeatherApi : MonoBehaviour
 {
-    public Text title;
+    //外部スクリプトからの取得用変数
+    public string city_name; //都市の名前
+    public string weather_condition; //天気の状態
+    public int temp_min; //最低気温
+    public int temp_max; //最高気温
 
     // Start is called before the first frame update
     IEnumerator Start()
@@ -21,19 +25,19 @@ public class WeatherApi : MonoBehaviour
         var json = Json.Deserialize(www.text) as Dictionary<string, object>;
         var weather = (IList)json["weather"];
         var weather0 = (IDictionary)weather[0];
-        var weather_condition = weather0["main"];
+        weather_condition = weather0["main"];
         var main2 = json["main"] as Dictionary<string, object>;
         var temp_min = main2["temp_min"];
         var temp_max = main2["temp_max"];
-        int int_temp_min = Convert.ToInt32(temp_min);
-        int int_temp_max = Convert.ToInt32(temp_max);
-        var city_name = json["name"];
-        title.text = "都市:" + city_name.ToString() + "\r\n" + "天気:" + weather_condition.ToString() + "\r\n" + "最高気温:" + int_temp_max.ToString() + "\r\n" + "最低気温:" + int_temp_min.ToString();
+        int_temp_min = Convert.ToInt32(temp_min);
+        int_temp_max = Convert.ToInt32(temp_max);
+        city_name = json["name"];
+
         //ログの出力
-        Debug.Log(weather_condition);
-        Debug.Log(int_temp_max);
-        Debug.Log(int_temp_min);
-        Debug.Log(city_name);
+        // Debug.Log(weather_condition);
+        // Debug.Log(int_temp_max);
+        // Debug.Log(int_temp_min);
+        // Debug.Log(city_name);
     }
     // Update is called once per frame
     void Update()
