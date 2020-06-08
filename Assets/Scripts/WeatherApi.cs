@@ -25,19 +25,19 @@ public class WeatherApi : MonoBehaviour
         var json = Json.Deserialize(www.text) as Dictionary<string, object>;
         var weather = (IList)json["weather"];
         var weather0 = (IDictionary)weather[0];
-        weather_condition = weather0["main"];
+        weather_condition = (string)weather0["main"];
         var main2 = json["main"] as Dictionary<string, object>;
         var temp_min = main2["temp_min"];
         var temp_max = main2["temp_max"];
-        int_temp_min = Convert.ToInt32(temp_min);
-        int_temp_max = Convert.ToInt32(temp_max);
-        city_name = json["name"];
+        temp_min = Convert.ToInt32(temp_min);
+        temp_max = Convert.ToInt32(temp_max);
+        city_name = (string)json["name"];
 
         //ログの出力
-        // Debug.Log(weather_condition);
-        // Debug.Log(int_temp_max);
-        // Debug.Log(int_temp_min);
-        // Debug.Log(city_name);
+        //Debug.Log(weather_condition);
+        //Debug.Log(temp_max);
+        //Debug.Log(temp_min);
+        //Debug.Log(city_name);
     }
     // Update is called once per frame
     void Update()
