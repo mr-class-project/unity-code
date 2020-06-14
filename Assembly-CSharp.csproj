@@ -66,6 +66,7 @@
     <Compile Include="Assets\Mixamo\Melee Axe Pack\Demo\CameraScroll.cs" />
     <Compile Include="Assets\RobotSphere\Assets\Scripts\RobotFreeAnim.cs" />
     <Compile Include="Assets\Scripts\AskWeather.cs" />
+    <Compile Include="Assets\Scripts\MainCharController.cs" />
     <Compile Include="Assets\Scripts\MiniJSON.cs" />
     <Compile Include="Assets\Scripts\WeatherApi.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
@@ -293,14 +294,8 @@
     <Reference Include="websocket-sharp">
       <HintPath>/Users/yamanakayuutarou/vuforia/project/unity-code/Assets/Plugins/websocket-sharp.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>/Users/yamanakayuutarou/vuforia/project/unity-code/Library/PackageCache/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>/Users/yamanakayuutarou/vuforia/project/unity-code/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>/Users/yamanakayuutarou/vuforia/project/unity-code/Library/PackageCache/com.unity.purchasing@2.0.3/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2018.4.22f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

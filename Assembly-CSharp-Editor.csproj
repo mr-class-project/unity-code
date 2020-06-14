@@ -325,9 +325,6 @@
     <Reference Include="websocket-sharp">
       <HintPath>/Users/yamanakayuutarou/vuforia/project/unity-code/Assets/Plugins/websocket-sharp.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>/Users/yamanakayuutarou/vuforia/project/unity-code/Library/PackageCache/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>/Users/yamanakayuutarou/vuforia/project/unity-code/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
@@ -339,9 +336,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>/Users/yamanakayuutarou/vuforia/project/unity-code/Library/PackageCache/com.unity.analytics@3.2.3/Editor/Unity.Analytics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>/Users/yamanakayuutarou/vuforia/project/unity-code/Library/PackageCache/com.unity.purchasing@2.0.3/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>/Users/yamanakayuutarou/vuforia/project/unity-code/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
