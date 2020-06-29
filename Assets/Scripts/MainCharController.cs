@@ -34,16 +34,17 @@ public class MainCharController : MonoBehaviour
         //あらかじめ設定していたintパラメーター「trans」の値を取り出す.
         int param = animator.GetInteger("param");
 
-        
         if (order.Contains("ジャンプ"))
         {
             param = 1;
             Debug.Log(param);
-        } else if(order.Contains("ストップ"))
+        }
+        else if (order.Contains("ストップ"))
         {
             param = 0;
             Debug.Log(param);
-        } else if (order.Contains("走れ"))
+        }
+        else if (order.Contains("走れ"))
         {
             param = -1;
             Debug.Log(param);
@@ -51,7 +52,6 @@ public class MainCharController : MonoBehaviour
 
         /*
         //上矢印キーを押した際にパラメータ「trans」の値を増加させる.
-        
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             param++;
@@ -65,6 +65,7 @@ public class MainCharController : MonoBehaviour
             Debug.Log(param);
         }
         */
+        
         //intパラメーターの値を設定する.
         animator.SetInteger("param", param);
 
