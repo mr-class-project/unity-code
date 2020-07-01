@@ -32,22 +32,44 @@ public class MainCharController : MonoBehaviour
         Animator animator = GetComponent<Animator>();
 
         //あらかじめ設定していたintパラメーター「trans」の値を取り出す.
-        int param = animator.GetInteger("param");
+        //int param = animator.GetInteger("param");
+
+        //あらかじめ設定していたboolパラメーター「isJump」「isRun」「isKiik」「isLook」の値を取り出す.
+        bool isJump = animator.GetBool("isJump");
+        bool isRun = animator.GetBool("isRun");
+        bool isKiik = animator.GetBool("isKiik");
+        bool isLook = animator.GetBool("isLook");
 
         if (order.Contains("ジャンプ"))
         {
-            param = 1;
-            Debug.Log(param);
+            isJump = true;
+            Debug.Log(isJump);
         }
         else if (order.Contains("ストップ"))
         {
-            param = 0;
-            Debug.Log(param);
+            isJump = false;
+            isRun = false;
+            isKiik = false;
+            isLook = false;
+            Debug.Log(isJump);
+            Debug.Log(isRun);
+            Debug.Log(isKiik);
+            Debug.Log(isLook);
         }
         else if (order.Contains("走れ"))
         {
-            param = -1;
-            Debug.Log(param);
+            isRun = true;
+            Debug.Log(isRun);
+        }
+        else if (order.Contains("キック"))
+        {
+            isKiik = true;
+            Debug.Log(isKiik);
+        }
+        else if (order.Contains("探す"))
+        {
+            isLook = true;
+            Debug.Log(isLook);
         }
 
         /*
@@ -65,9 +87,15 @@ public class MainCharController : MonoBehaviour
             Debug.Log(param);
         }
         */
-        
+
         //intパラメーターの値を設定する.
-        animator.SetInteger("param", param);
+        //animator.SetInteger("param", param);
+
+        //boolパラメーターの値を設定する.
+        animator.SetBool("isJump",isJump);
+        animator.SetBool("isRun",isRun);
+        animator.SetBool("isKiik",isKiik);
+        animator.SetBool("isLook",isLook);
 
     }
 }
