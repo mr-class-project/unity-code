@@ -66,6 +66,7 @@
     <Compile Include="Assets\Mixamo\Melee Axe Pack\Demo\CameraScroll.cs" />
     <Compile Include="Assets\RobotSphere\Assets\Scripts\RobotFreeAnim.cs" />
     <Compile Include="Assets\Scripts\AskWeather.cs" />
+    <Compile Include="Assets\Scripts\DateApi.cs" />
     <Compile Include="Assets\Scripts\MainCharController.cs" />
     <Compile Include="Assets\Scripts\MiniJSON.cs" />
     <Compile Include="Assets\Scripts\WeatherApi.cs" />
