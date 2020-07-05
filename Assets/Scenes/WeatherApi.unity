@@ -141,7 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81fe98d56340f4bc99c0c407bfadb3ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: {fileID: 1855052498}
+  city_name: 
+  weather_condition: 
+  temp_min: 0
+  temp_max: 0
 --- !u!4 &8255292
 Transform:
   m_ObjectHideFlags: 0
