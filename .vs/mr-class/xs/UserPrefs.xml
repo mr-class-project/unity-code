@@ -1,14 +1,16 @@
 ﻿<Properties StartupConfiguration="{910649D9-E2BA-A1F0-F637-1CB94CE81445}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WeatherApi.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controller.cs">
     <Files>
-      <File FileName="Assets/Scripts/MainCharController.cs" Line="101" Column="2" />
-      <File FileName="Assets/Scripts/WeatherApi.cs" Line="13" Column="24" />
-      <File FileName="Assets/Scripts/DateApi.cs" />
+      <File FileName="Assets/Scripts/TextDisplay.cs" Line="17" Column="62" />
+      <File FileName="Assets/Scripts/MainCharController.cs" Line="3" Column="34" />
+      <File FileName="Assets/Scripts/Controller.cs" Line="28" Column="12" />
+      <File FileName="Assets/Scripts/ClerkMotion.cs" Line="91" Column="31" />
+      <File FileName="Assets/Scripts/WeatherApi.cs" Line="55" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4bb0321e-ddda-47c7-8a88-82286df99e8d" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4c4b17a1-9c36-4e66-8600-5b3a01346f67" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

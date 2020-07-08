@@ -145,6 +145,8 @@ MonoBehaviour:
   weather_condition: 
   temp_min: 0
   temp_max: 0
+  tommorow_weather: 
+  tommorow_temperature: 0
 --- !u!4 &8255292
 Transform:
   m_ObjectHideFlags: 0

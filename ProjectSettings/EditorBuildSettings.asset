@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Kyle.unity
+    guid: 88f664130cba94e5987dcd63bf8f31ce
+  - enabled: 1
+    path: Assets/Scenes/WeatherApi.unity
+    guid: bf0d12c54994648eaae5f46ce0b0f7c5
   m_configObjects: {}
