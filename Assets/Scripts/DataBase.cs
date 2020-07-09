@@ -10,6 +10,37 @@ public class DataBase : MonoBehaviour
     public int sandwich = 0;
     public int potato = 0;
     public int cola = 0;
+    public int total_money = 0;
+    public int recommend = 0;
+
+    public void SaveDataBase(string s, int money, int num)
+    {
+        GetComponent<DataBase>().total_money += money;
+        if (s == "ハンバーガー")
+        {
+            GetComponent<DataBase>().hamburger += num;
+        }
+        else if (s == "ホットドッグ")
+        {
+            GetComponent<DataBase>().hotdog += num;
+        }
+        else if (s == "サンドウィッチ")
+        {
+            GetComponent<DataBase>().sandwich += num;
+        }
+        else if (s == "ポテト")
+        {
+            GetComponent<DataBase>().potato += num;
+        }
+        else if (s == "コーラ")
+        {
+            GetComponent<DataBase>().cola += num;
+        }
+        else
+        {
+            GetComponent<DataBase>().recommend += num;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()

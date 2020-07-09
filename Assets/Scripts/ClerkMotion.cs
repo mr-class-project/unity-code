@@ -13,9 +13,12 @@ public class ClerkMotion : MonoBehaviour
 
     public void isWavingTrue()
     {
-        isWaving = true;
         Animator animator = GetComponent<Animator>();
-        animator.SetBool("isWaving", isWaving);
+        animator.SetBool("isWaving", true);
+        animator.SetBool("isThinking", false);
+        animator.SetBool("isIdlingB", false);
+        animator.SetBool("isLooking", false);
+        animator.SetBool("isSwitching", false);
     }
     void ChangeMotion()
     {
@@ -27,7 +30,6 @@ public class ClerkMotion : MonoBehaviour
         isIdlingB = animator.GetBool("isIdlingB");
         isLooking = animator.GetBool("isLooking");
         isSwitching = animator.GetBool("isSwitching");
-        isWaving = animator.GetBool("isWaving");
 
         if (isWaving)
         {
@@ -69,7 +71,6 @@ public class ClerkMotion : MonoBehaviour
         animator.SetBool("isIdlingB", isIdlingB);
         animator.SetBool("isLooking", isLooking);
         animator.SetBool("isSwitching", isSwitching);
-        animator.SetBool("isWaving", isWaving);
     }
 
     // Start is called before the first frame update
@@ -87,7 +88,5 @@ public class ClerkMotion : MonoBehaviour
             RemainTime += 500;
             ChangeMotion();
         }
-        //Debug.Log(RemainTime);
-        //Debug.Log(isWaving);
     }
 }

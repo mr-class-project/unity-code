@@ -13,10 +13,11 @@ public class WeatherApi : MonoBehaviour
     public int temp_min; //最低気温
     public int temp_max; //最高気温
 
-
     //外部スクリプトからの取得用変数
     //public string tommorow_weather; // 明日(24時間後)の天気
     //public int tommorow_temperature; // 明日の最高気温
+
+    public Controller c;
 
     string IconToWeather(string s)
     {
@@ -34,6 +35,10 @@ public class WeatherApi : MonoBehaviour
     int DoubleToInt(double d)
     {
         return (int)d;
+    }
+    void SendData(string s)
+    {
+        c.GetComponent<Controller>().weather = s;
     }
 
     // Start is called before the first frame update
@@ -56,6 +61,7 @@ public class WeatherApi : MonoBehaviour
         temp_min = Convert.ToInt32(temp_min);
         temp_max = Convert.ToInt32(temp_max);
         city_name = (string)json["name"];
+        SendData(weather_condition);
 
         //ログの出力
         //Debug.Log(weather_condition);
