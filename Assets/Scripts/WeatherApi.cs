@@ -12,11 +12,12 @@ public class WeatherApi : MonoBehaviour
     public string weather_condition; //天気の状態
     public int temp_min; //最低気温
     public int temp_max; //最高気温
-    
 
     //外部スクリプトからの取得用変数
-    public string tommorow_weather; // 明日(24時間後)の天気
-    public int tommorow_temperature; // 明日の最高気温
+    //public string tommorow_weather; // 明日(24時間後)の天気
+    //public int tommorow_temperature; // 明日の最高気温
+
+    public Controller c;
 
     string IconToWeather(string s)
     {
@@ -35,37 +36,45 @@ public class WeatherApi : MonoBehaviour
     {
         return (int)d;
     }
+    void SendData(string s)
+    {
+        c.GetComponent<Controller>().weather = s;
+    }
 
     // Start is called before the first frame update
     IEnumerator Start()
     {
-
-        /*
+        //apiとの通信
         string url = "http://api.openweathermap.org/data/2.5/weather?id=1850147&units=metric&appid=111643793037a778a62d66e2a7d7d372";
+        WWW www = new WWW(url);
+        yield return www;
+        //今日の天気をjsonから取り出す
         var jsonString = www.text;
         var json = Json.Deserialize(www.text) as Dictionary<string, object>;
         var weather = (IList)json["weather"];
         var weather0 = (IDictionary)weather[0];
-        weather_condition = (string)weather0["main"];
+        string icon = (string)weather0["icon"];
+        weather_condition = IconToWeather(icon);
         var main2 = json["main"] as Dictionary<string, object>;
         var temp_min = main2["temp_min"];
         var temp_max = main2["temp_max"];
         temp_min = Convert.ToInt32(temp_min);
         temp_max = Convert.ToInt32(temp_max);
         city_name = (string)json["name"];
+        SendData(weather_condition);
 
         //ログの出力
         //Debug.Log(weather_condition);
         //Debug.Log(temp_max);
         //Debug.Log(temp_min);
         //Debug.Log(city_name);
-        */
+
 
         //apiとの通信
+        /*
         string url = "http://api.openweathermap.org/data/2.5/forecast?id=1850147&units=metric&cnt=8&appid=111643793037a778a62d66e2a7d7d372";
         WWW www = new WWW(url);
         yield return www;
-
         //明日の天気をjsonから取り出す
         var json = Json.Deserialize(www.text) as Dictionary<string, object>;
         var list = (IList)json["list"];
@@ -76,10 +85,11 @@ public class WeatherApi : MonoBehaviour
         tommorow_weather = IconToWeather(weather_icon);
         var main = tommorow["main"] as Dictionary<string, object>;
         tommorow_temperature = DoubleToInt(Convert.ToInt32(main["temp"]));
-
         //ログの出力
         //Debug.Log(tommorow_weather);
         //Debug.Log(tommorow_temperature);
+        */
+
     }
     // Update is called once per frame
     void Update()

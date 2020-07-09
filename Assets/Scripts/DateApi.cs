@@ -9,10 +9,18 @@ public class DateApi : MonoBehaviour
     //外部スクリプトからの取得用変数
     public string month; //月
     public string day; //日
-    public string hour_min; //時分
+    public string hour; //時
+    public string min; //分
+    public Controller c;
 
     //DateTimeを使うため変数を設定
     DateTime TodayNow;
+
+    void SendData(string s)
+    {
+        c.GetComponent<Controller>().hour = s;
+        Debug.Log(s);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +29,9 @@ public class DateApi : MonoBehaviour
         TodayNow = DateTime.Now;
         month = TodayNow.Month.ToString();
         day = TodayNow.Day.ToString();
-        hour_min = TodayNow.ToShortTimeString();
+        hour = TodayNow.Hour.ToString();
+        min = TodayNow.Minute.ToString();
+        SendData(hour);
     }
 
     // Update is called once per frame
